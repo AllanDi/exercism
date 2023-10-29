@@ -15,32 +15,21 @@ public class AnnalynsInfiltration {
     }
 
     public static boolean canSpy(boolean knightIsAwake, boolean archerIsAwake, boolean prisonerIsAwake) {
-        if (knightIsAwake || archerIsAwake || prisonerIsAwake) {
-            return true;
-        } else {
-            return false;
-        }
+        return  knightIsAwake || archerIsAwake || prisonerIsAwake;
     }
 
     public static boolean canSignalPrisoner(boolean archerIsAwake, boolean prisonerIsAwake) {
-        if (!archerIsAwake && prisonerIsAwake) {
-            return true;
-        } else {
-            return false;
-        }
+        return  !archerIsAwake && prisonerIsAwake;
     }
 
     public static boolean canFreePrisoner(boolean knightIsAwake, boolean archerIsAwake,
                                           boolean prisonerIsAwake, boolean petDogIsPresent) {
-        if ((!knightIsAwake && !archerIsAwake && prisonerIsAwake && petDogIsPresent) ||
+        return  (!knightIsAwake && !archerIsAwake && prisonerIsAwake && petDogIsPresent) ||
                 (knightIsAwake && !archerIsAwake && prisonerIsAwake && petDogIsPresent) ||
                 (!knightIsAwake && !archerIsAwake && !prisonerIsAwake && petDogIsPresent) ||
                 (knightIsAwake && !archerIsAwake && !prisonerIsAwake && petDogIsPresent) ||
-                (!knightIsAwake && !archerIsAwake && prisonerIsAwake && !petDogIsPresent)) {
-            return true;
-        } else {
-            return false;
-        }
+                (!knightIsAwake && !archerIsAwake && prisonerIsAwake && !petDogIsPresent);
+
     }
 
     /*
