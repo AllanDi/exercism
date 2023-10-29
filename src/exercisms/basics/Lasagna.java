@@ -10,19 +10,23 @@ public class Lasagna {
         System.out.println(lasagna.preparationTimeInMinutes(2));
         System.out.println(lasagna.totalTimeInMinutes(3, 20));
     }
+
     int expectedMinutesInOven = 40;
     int layerCookTime = 2;
 
-    public int expectedMinutesInOven(){
+    public int expectedMinutesInOven() {
         return expectedMinutesInOven;
     }
-    public int remainingMinutesInOven(int minutes){
+
+    public int remainingMinutesInOven(int minutes) {
         return this.expectedMinutesInOven - minutes;
     }
-    public int preparationTimeInMinutes(int layers){
+
+    public int preparationTimeInMinutes(int layers) {
         return this.layerCookTime * layers;
     }
-    public int totalTimeInMinutes(int numberLayers, int timeCookingMinutes){
+
+    public int totalTimeInMinutes(int numberLayers, int timeCookingMinutes) {
         return (this.layerCookTime * numberLayers) + timeCookingMinutes;
     }
 

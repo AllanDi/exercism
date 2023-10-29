@@ -4,7 +4,6 @@ public class Greeter {
         Greeter greeter = new Greeter();
         System.out.println(greeter.getGreeting());
     }
-
     public String getGreeting() {
         return "Hello, World!";
     }
