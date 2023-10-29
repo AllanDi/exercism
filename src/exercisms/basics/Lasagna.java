@@ -1,4 +1,4 @@
-package exercisms;
+package exercisms.basics;
 
 public class Lasagna {
     public static void main(String[] args) {

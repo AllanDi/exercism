@@ -1,7 +1,4 @@
-import exercisms.Greeter;
-import exercisms.Lasagna;
-
-import java.io.FilterOutputStream;
+import exercisms.basics.Lasagna;
 
 public class Main {
     public static void main(String[] args) {
