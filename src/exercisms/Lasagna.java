@@ -17,16 +17,13 @@ public class Lasagna {
         return expectedMinutesInOven;
     }
     public int remainingMinutesInOven(int minutes){
-        int timeRemain = this.expectedMinutesInOven - minutes;
-        return timeRemain;
+        return this.expectedMinutesInOven - minutes;
     }
     public int preparationTimeInMinutes(int layers){
-        int preparationTime = this.layerCookTime * layers;
-        return preparationTime;
+        return this.layerCookTime * layers;
     }
     public int totalTimeInMinutes(int numberLayers, int timeCookingMinutes){
-        int totalTime = (this.layerCookTime * numberLayers) + timeCookingMinutes;
-        return totalTime;
+        return (this.layerCookTime * numberLayers) + timeCookingMinutes;
     }
 
     /*
