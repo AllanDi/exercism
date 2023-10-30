@@ -10,6 +10,7 @@ public class Main {
         System.out.println(SqueakyClean.clean("my   Id"));
         System.out.println(SqueakyClean.clean("my\0Id"));
         System.out.println(SqueakyClean.clean("à-ḃç"));
+        System.out.println(SqueakyClean.clean("àḃç"));
 
 
     }
