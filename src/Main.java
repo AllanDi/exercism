@@ -1,15 +1,15 @@
 import exercisms.basics.Lasagna;
 import exercisms.booleans.AnnalynsInfiltration;
+import exercisms.chars.SqueakyClean;
 import exercisms.ifElseStatements.CarsAssemble;
 import exercisms.strings.LogLevels;
 
 public class Main {
     public static void main(String[] args) {
 
-        CarsAssemble carsAssemble = new CarsAssemble();
-
-        System.out.println(carsAssemble.productionRatePerHour(1));
-        System.out.println(carsAssemble.workingItemsPerMinute(6));
+        System.out.println(SqueakyClean.clean("my   Id"));
+        System.out.println(SqueakyClean.clean("my\0Id"));
+        System.out.println(SqueakyClean.clean("à-ḃç"));
 
 
     }
