@@ -1,31 +1,29 @@
 package exercisms.chars;
-
-import java.nio.charset.Charset;
-import java.text.Normalizer;
-
 public class SqueakyClean {
     public static String clean(String identifier) {
-        String regex = "[\\p{Cntrl}]";
-        String normalizedText = Normalizer.normalize(identifier, Normalizer.Form.NFC);
-        String cleanText = normalizedText
-                .replaceAll(regex, "CTRL")
-                .replaceAll(" ", "_");
+       String result = identifier
+               .replace(" ", "_")
+               .replaceAll("\\p{Cntrl}", "CTRL");
 
-        StringBuilder camelCase = new StringBuilder();
-        boolean capitalizeNext = false;
+       return result;
+    }
 
-        for (int i = 0; i < cleanText.length(); i++) {
-            char c = cleanText.charAt(i);
-            if (c == '-') {
-                capitalizeNext = true;
-            } else if (capitalizeNext) {
-                camelCase.append(Character.toUpperCase(c));
-                capitalizeNext = false;
-            } else {
-                camelCase.append(c);
+    public static String teste(String testeString) {
+        String[] partes = testeString.split("-");
+
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+
+                stringBuilder.append(parte.substring(0, 1).toLowerCase());
+
+                stringBuilder.append(parte.substring(1).toUpperCase());
+
+                return stringBuilder.toString();
+
             }
         }
 
-        return camelCase.toString();
     }
+
 }
