@@ -13,8 +13,8 @@ public class Main {
         System.out.println(SqueakyClean.clean("àḃç"));
 
         System.out.println("-------------------");
-        System.out.println(SqueakyClean.teste("12345-1234-5"));
-        System.out.println(SqueakyClean.teste("123456-12345"));
+        System.out.println(SqueakyClean.clean("abc-abc"));
+
 
 
     }
