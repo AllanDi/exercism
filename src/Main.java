@@ -12,10 +12,5 @@ public class Main {
         System.out.println(SqueakyClean.clean("à-1ḃç"));
         System.out.println(SqueakyClean.clean("9 -abcĐ\uD83D\uDE00ω\0"));
 
-
-
-
-
-
     }
 }

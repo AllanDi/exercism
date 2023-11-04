@@ -1,8 +1,14 @@
 package exercisms.chars;
 
-import java.util.regex.Pattern;
-
 public class SqueakyClean {
+    public static void main(String[] args) {
+
+        System.out.println(SqueakyClean.clean("my    Id"));
+        System.out.println(SqueakyClean.clean("my\0Id"));
+        System.out.println(SqueakyClean.clean("à-1ḃç"));
+        System.out.println(SqueakyClean.clean("9 -abcĐ\uD83D\uDE00ω\0"));
+    }
+
     public static String clean(String identifier) {
         String result = identifier
                 .replaceAll("[α-ω]", "")
@@ -43,5 +49,30 @@ public class SqueakyClean {
         }
         return result;
     }
+
+//    import java.util.Locale;
+//    import java.util.regex.Pattern;
+//
+//    class SqueakyClean {
+//
+//        static String clean(String identifier) {
+//
+//            var result = identifier.replace(' ', '_')
+//                    .replaceAll("[α-ω]", "")
+//                    .replaceAll("\\p{C}", "CTRL")
+//                    .replaceAll("[^\\p{L}\\p{P}]", "");
+//
+//            var matcher = Pattern.compile("(.*)(-\\p{L})(.*)").matcher(result);
+//            if (matcher.matches()) {
+//                result = matcher.replaceAll(
+//                        matcher.group(1)
+//                                + matcher.group(2).toUpperCase(Locale.ROOT).substring(1)
+//                                + matcher.group(3)
+//                );
+//            }
+//
+//            return result;
+//        }
+//    }
 }
 
