@@ -1,19 +1,20 @@
 package exercisms.classes;
 
 public class ElonsToyCar {
+
+    int battery = 100;
+    int distance = 0;
     public static ElonsToyCar buy() {
-        throw new UnsupportedOperationException("Please implement the (static) RemoteControlCar.buy()  method");
+        ElonsToyCar car = new ElonsToyCar();
+        return car;
     }
-
     public String distanceDisplay() {
-        throw new UnsupportedOperationException("Please implement the RemoteControlCar.distanceDisplay()  method");
+        return "Driven " + this.distance + " meters";
     }
-
     public String batteryDisplay() {
-        throw new UnsupportedOperationException("Please implement the RemoteControlCar.batteryDisplay()  method");
+        return "Battery at " + this.battery + "%";
     }
-
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the RemoteControlCar.drive()  method");
+
     }
 }
