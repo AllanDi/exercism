@@ -13,6 +13,8 @@ public class Main {
         birdWatcher.incrementTodaysCount();
         System.out.println(birdWatcher.getToday());
         System.out.println(birdWatcher.hasDayWithoutBirds());
+        System.out.println(birdWatcher.getCountForFirstDays(4));
+        System.out.println(birdWatcher.getCountForFirstDays(10));
 
 
 
