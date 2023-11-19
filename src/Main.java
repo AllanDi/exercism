@@ -15,6 +15,7 @@ public class Main {
         System.out.println(birdWatcher.hasDayWithoutBirds());
         System.out.println(birdWatcher.getCountForFirstDays(4));
         System.out.println(birdWatcher.getCountForFirstDays(10));
+        System.out.println(birdWatcher.getBusyDays());
 
 
 
