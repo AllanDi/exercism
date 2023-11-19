@@ -1,7 +1,7 @@
 package exercisms.arrays;
 
 public class BirdWatcher {
-    int[] birdsPerDay = { 2, 5, 0, 7, 4, 1 };
+    private final int[] birdsPerDay;
     int[] lastWeek = {0, 2, 5, 3, 7, 8, 4};
 
     public BirdWatcher(int[] birdsPerDay) {
@@ -9,19 +9,24 @@ public class BirdWatcher {
     }
 
     public int[] getLastWeek() {
-        return lastWeek;
+        return this.lastWeek;
     }
 
     public int getToday() {
-        return this.birdsPerDay[5];
+       return this.birdsPerDay[6];
     }
 
     public void incrementTodaysCount() {
-        throw new UnsupportedOperationException("Please implement the BirdCount.incrementTodaysCount() method");
+        this.birdsPerDay[6] = birdsPerDay[6]+1;
     }
 
     public boolean hasDayWithoutBirds() {
-        throw new UnsupportedOperationException("Please implement the BirdCount.hasDayWithoutBirds() method");
+       for (int n: this.birdsPerDay) {
+           if (n == 0){
+               return true;
+           }
+        }
+        return false;
     }
 
     public int getCountForFirstDays(int numberOfDays) {

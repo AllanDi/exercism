@@ -4,12 +4,18 @@ public class Main {
     public static void main(String[] args) {
 
 
-        int[] birdsPerDay = { 2, 5, 0, 7, 4, 1 };
 
-        BirdWatcher birdWatcher = new BirdWatcher(birdsPerDay);
+     BirdWatcher birdWatcher = new BirdWatcher(new int[]{1, 2, 5, 3, 7, 8, 4});
 
+        System.out.println(birdWatcher);
         System.out.println(birdWatcher.getLastWeek());
         System.out.println(birdWatcher.getToday());
+        birdWatcher.incrementTodaysCount();
+        System.out.println(birdWatcher.getToday());
+        System.out.println(birdWatcher.hasDayWithoutBirds());
+
+
+
 
 
     }
