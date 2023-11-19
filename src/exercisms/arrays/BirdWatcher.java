@@ -1,21 +1,19 @@
 package exercisms.arrays;
 
 public class BirdWatcher {
-
-    public final int[] birdsPerDay;
+    int[] birdsPerDay = { 2, 5, 0, 7, 4, 1 };
+    int[] lastWeek = {0, 2, 5, 3, 7, 8, 4};
 
     public BirdWatcher(int[] birdsPerDay) {
         this.birdsPerDay = birdsPerDay.clone();
     }
 
     public int[] getLastWeek() {
-
-        int [] lastWeek = {0, 2, 5, 3, 7, 8, 4};
         return lastWeek;
     }
 
     public int getToday() {
-        throw new UnsupportedOperationException("Please implement the BirdCount.getToday() method");
+        return this.birdsPerDay[5];
     }
 
     public void incrementTodaysCount() {
