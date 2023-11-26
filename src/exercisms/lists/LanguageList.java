@@ -7,11 +7,16 @@ public class LanguageList {
     private final List<String> languages = new ArrayList<>();
 
     public boolean isEmpty() {
-        if ()
+
+        boolean empty = false;
+        if (languages.size() == 0) {
+            return empty =true;
+        }
+        return empty;
     }
 
     public void addLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the addLanguage() method");
+
     }
 
     public void removeLanguage(String language) {
