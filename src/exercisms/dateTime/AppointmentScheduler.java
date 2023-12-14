@@ -3,9 +3,12 @@ package exercisms.dateTime;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-class AppointmentScheduler {
+public class AppointmentScheduler {
     public LocalDateTime schedule(String appointmentDateDescription) {
-        throw new UnsupportedOperationException("Please implement the AppointmentScheduler.schedule() method");
+
+        LocalDateTime.parse(appointmentDateDescription);
+
+
     }
 
     public boolean hasPassed(LocalDateTime appointmentDate) {
