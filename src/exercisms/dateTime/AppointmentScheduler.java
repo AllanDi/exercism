@@ -3,13 +3,15 @@ package exercisms.dateTime;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 public class AppointmentScheduler {
     public LocalDateTime schedule(String appointmentDateDescription){
 
-        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("MM/dd/yyyy HH:mm:ss");
-        LocalDateTime d01 = LocalDateTime.parse(appointmentDateDescription, fmt1);
+        DateTimeFormatter parser = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        LocalDateTime d01 = LocalDateTime.parse(appointmentDateDescription, parser);
+
         return d01;
     }
 
