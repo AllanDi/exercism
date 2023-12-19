@@ -8,6 +8,10 @@ public class NeedForSpeed {
     int distance;
     int battery;
 
+    public int getDistance(){
+        return this.distance;
+    }
+
     public NeedForSpeed(int speed, int batteryDrain) {
         this.speed = speed;
         this.batteryDrain = batteryDrain;
@@ -35,7 +39,9 @@ public class NeedForSpeed {
 
 class RaceTrack {
     RaceTrack(int distance) {
+        if (distance <= NeedForSpeed.getDistance()){
 
+        }
     }
 
     public boolean tryFinishTrack(NeedForSpeed car) {
