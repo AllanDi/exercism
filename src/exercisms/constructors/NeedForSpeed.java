@@ -1,26 +1,40 @@
 package exercisms.constructors;
 
+
 public class NeedForSpeed {
-    NeedForSpeed(int speed, int batteryDrain) {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed constructor");
-    }
 
+    int speed;
+    int batteryDrain;
+    int distance;
+    int battery;
+
+    public NeedForSpeed(int speed, int batteryDrain) {
+        this.speed = speed;
+        this.batteryDrain = batteryDrain;
+    }
     public boolean batteryDrained() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.batteryDrained() method");
+        if (this.battery == 100) {
+            return true;
+        }
+        return false;
     }
-
     public int distanceDriven() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.distanceDriven() method");
+        return this.distance;
     }
-
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the NeedForSpeed.drive() method");
+        if (this.battery <= 100) {
+            this.distance = this.distance + this.speed;
+            this.battery = this.battery +this.batteryDrain;
+        }
     }
-
     public static NeedForSpeed nitro() {
-        throw new UnsupportedOperationException("Please implement the (static) NeedForSpeed.nitro() method");
+        NeedForSpeed car = new NeedForSpeed(4,50);
+        return car;
     }
 }
+
+
+
 
 class RaceTrack {
     RaceTrack(int distance) {
