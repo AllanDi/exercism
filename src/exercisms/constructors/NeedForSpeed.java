@@ -13,7 +13,7 @@ public class NeedForSpeed {
         this.batteryDrain = batteryDrain;
     }
     public boolean batteryDrained() {
-        if (this.battery == 100) {
+        if (this.battery >= 100) {
             return true;
         }
         return false;
@@ -28,7 +28,7 @@ public class NeedForSpeed {
         }
     }
     public static NeedForSpeed nitro() {
-        NeedForSpeed car = new NeedForSpeed(4,50);
+        NeedForSpeed car = new NeedForSpeed(50,4);
         return car;
     }
 }
