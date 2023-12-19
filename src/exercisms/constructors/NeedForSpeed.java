@@ -33,12 +33,9 @@ public class NeedForSpeed {
     }
 }
 
-
-
-
 class RaceTrack {
     RaceTrack(int distance) {
-        throw new UnsupportedOperationException("Please implement the RaceTrack constructor");
+
     }
 
     public boolean tryFinishTrack(NeedForSpeed car) {
