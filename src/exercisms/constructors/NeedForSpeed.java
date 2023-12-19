@@ -22,7 +22,7 @@ public class NeedForSpeed {
         return this.distance;
     }
     public void drive() {
-        if (this.battery <= 100) {
+        if (this.battery < 100) {
             this.distance = this.distance + this.speed;
             this.battery = this.battery +this.batteryDrain;
         }
