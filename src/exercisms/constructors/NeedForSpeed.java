@@ -36,15 +36,18 @@ public class NeedForSpeed {
         return car;
     }
 }
-
 class RaceTrack {
-    RaceTrack(int distance) {
-        if (distance <= NeedForSpeed.getDistance()){
-
-        }
+    int distance;
+    void RaceTrack(int distance) {
+        this.distance = distance;
     }
-
     public boolean tryFinishTrack(NeedForSpeed car) {
-        throw new UnsupportedOperationException("Please implement the RaceTrack.tryFinishTrack() method");
+        while (!car.batteryDrained()){
+            car.drive();
+        }
+        if(this.distance <= car.distance){
+            return true;
+        }
+        return false;
     }
 }
