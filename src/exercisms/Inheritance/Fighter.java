@@ -1,11 +1,12 @@
 package exercisms.Inheritance;
 
-
-
 abstract class Fighter {
 
+    boolean vulnerable = false;
+
+
     boolean isVulnerable() {
-        throw new UnsupportedOperationException("Please provide implementation for this method");
+        return false;
     }
 
     abstract int damagePoints(Fighter fighter);
@@ -14,10 +15,17 @@ abstract class Fighter {
 
 class Warrior extends Fighter {
 
+    public static void main(String[] args) {
+        Warrior warrior = new Warrior();
+        System.out.println(warrior);
+        System.out.println(warrior.isVulnerable());
+    }
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("Please implement the toString() method with the required text");
+        Warrior warrior = new Warrior();
+        String className = warrior.getClass().getSimpleName();
+        return "Fighter is a " + className;
     }
 
     @Override
@@ -28,18 +36,38 @@ class Warrior extends Fighter {
 
 class Wizard extends Fighter {
 
+
+    boolean speelActivate = false;
+
+    @Override
+    public String toString() {
+        Wizard wizard = new Wizard();
+        String className = wizard.getClass().getSimpleName();
+        return "Fighter is a " + className;
+    }
+
     @Override
     boolean isVulnerable() {
-        throw new UnsupportedOperationException("Please implement Wizard.isVulnerable() method");
+        if (speelActivate){
+            this.vulnerable = false;
+        } else this.vulnerable = true;
+        return this.vulnerable;
     }
 
     @Override
     int damagePoints(Fighter fighter) {
-        throw new UnsupportedOperationException("Please implement Wizard.damagePoints() method");
+        int damagePoints = 0;
+        if (speelActivate){
+           damagePoints = 12;
+        } else damagePoints = 3;
+        return damagePoints;
     }
 
     void prepareSpell() {
-        throw new UnsupportedOperationException("Please implement Wizard.prepareSpell() method");
+            if (this.vulnerable == true){
+            this.vulnerable = false;
+            this.speelActivate = true;
+        } else this.speelActivate = true;
     }
 
 }
