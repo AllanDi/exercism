@@ -1,16 +1,16 @@
 package exercisms.Interfaces;
 
- interface RemoteControlCar {
-    void ligar();
-    void desligar();
-}
-public class ExperimentalRemoteControlCar {
+public class ExperimentalRemoteControlCar implements RemoteControlCar {
 
+    private int distance;
+
+    @Override
     public void drive() {
-        throw new UnsupportedOperationException("Please implement the ExperimentalRemoteControlCar.drive() method");
+        this.distance = this.distance + 20;
     }
 
+    @Override
     public int getDistanceTravelled() {
-        throw new UnsupportedOperationException("Please implement the ExperimentalRemoteControlCar.getDistanceTravelled() method");
+        return this.distance;
     }
 }
