@@ -22,6 +22,7 @@ public class LanguageList {
         System.out.println(languageList.isExciting());
         languageList.addLanguage("Java");
         System.out.println(languageList.isExciting());
+        System.out.println(languageList.isExciting());
     }
 
     private final List<String> languages = new ArrayList<>();
