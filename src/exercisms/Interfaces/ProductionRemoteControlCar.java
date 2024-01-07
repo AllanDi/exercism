@@ -4,10 +4,11 @@ class ProductionRemoteControlCar implements RemoteControlCar {
 
 
     private int distance;
+    int numberOfVictories;
 
     @Override
     public void drive() {
-        this.distance = this.distance + 20;
+        this.distance = this.distance + 10;
     }
 
     @Override
@@ -16,10 +17,10 @@ class ProductionRemoteControlCar implements RemoteControlCar {
     }
 
     public int getNumberOfVictories() {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.getNumberOfVictories() method");
+        return this.numberOfVictories;
     }
 
     public void setNumberOfVictories(int numberOfVictories) {
-        throw new UnsupportedOperationException("Please implement the ProductionRemoteControlCar.setNumberOfVictories() method");
+        this.numberOfVictories += numberOfVictories;
     }
 }
