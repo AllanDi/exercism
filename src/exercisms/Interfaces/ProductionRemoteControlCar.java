@@ -1,17 +1,17 @@
 package exercisms.Interfaces;
 
-class ProductionRemoteControlCar implements RemoteControlCar {
+class ProductionRemoteControlCar implements RemoteControlCar, Comparable<ProductionRemoteControlCar> {
 
 
     private int distance;
-    int numberOfVictories;
+    private int numberOfVictories;
 
-    @Override
+
     public void drive() {
         this.distance = this.distance + 10;
     }
 
-    @Override
+
     public int getDistanceTravelled() {
         return this.distance;
     }
@@ -21,6 +21,10 @@ class ProductionRemoteControlCar implements RemoteControlCar {
     }
 
     public void setNumberOfVictories(int numberOfVictories) {
-        this.numberOfVictories += numberOfVictories;
+        this.numberOfVictories = numberOfVictories;
+    }
+
+    public int compareTo(ProductionRemoteControlCar compCar) {
+        return Integer.compare(compCar.getNumberOfVictories(), getNumberOfVictories());
     }
 }

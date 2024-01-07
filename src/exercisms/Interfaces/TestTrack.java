@@ -1,5 +1,6 @@
 package exercisms.Interfaces;
 
+import java.util.Collections;
 import java.util.List;
 
 public class TestTrack {
@@ -8,18 +9,9 @@ public class TestTrack {
         car.drive();
     }
 
-    public static List<ProductionRemoteControlCar> getRankedCars(List<ProductionRemoteControlCar> cars) {
-        throw new UnsupportedOperationException("Please implement the (static) TestTrack.getRankedCars() method");
+    public static List<ProductionRemoteControlCar> getRankedCars(List<ProductionRemoteControlCar> rankCars) {
+        Collections.sort(rankCars);
+        return rankCars;
     }
 
-    public static void main(String[] args) {
-
-        ProductionRemoteControlCar productionRemoteControlCar = new ProductionRemoteControlCar();
-
-        productionRemoteControlCar.setNumberOfVictories(5);
-        productionRemoteControlCar.setNumberOfVictories(6);
-        System.out.println(productionRemoteControlCar.getNumberOfVictories());
-
-
-    }
 }

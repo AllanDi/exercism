@@ -2,7 +2,7 @@ package exercisms.Interfaces;
 
 public interface RemoteControlCar {
 
-    void drive();
-    int getDistanceTravelled();
+    public void drive();
+    public int getDistanceTravelled();
 
 }
