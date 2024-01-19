@@ -1,5 +1,7 @@
 package exercisms.exceptions;
 
+import java.awt.dnd.InvalidDnDOperationException;
+
 public class CalculatorConundrum {
 
     public String calculate(int operand1, int operand2, String operation){
@@ -9,6 +11,10 @@ public class CalculatorConundrum {
         }
         if( operation == "" ){
             throw new IllegalArgumentException("Operation cannot be empty");
+        }
+
+        if (operation != "+" && operation != "*" && operation != "/"){
+            throw new InvalidOperationException("Operation " + operation + " does not exist");
         }
 
             if (operation == "+") {

@@ -5,7 +5,7 @@ public class CalculatorMain {
 
         CalculatorConundrum calculatorConundrum = new CalculatorConundrum();
 
-        System.out.println(calculatorConundrum.calculate(1,2,null));
+        System.out.println(calculatorConundrum.calculate(1,2,"**"));
 
 
 
