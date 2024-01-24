@@ -4,7 +4,7 @@ import java.awt.dnd.InvalidDnDOperationException;
 
 public class CalculatorConundrum {
 
-    public String calculate(int operand1, int operand2, String operation){
+    public String calculate(int operand1, int operand2, String operation) {
 
         if( operation == null ){
             throw new IllegalArgumentException("Operation cannot be null");
@@ -13,8 +13,13 @@ public class CalculatorConundrum {
             throw new IllegalArgumentException("Operation cannot be empty");
         }
 
-        if (operation != "+" && operation != "*" && operation != "/"){
-            throw new InvalidOperationException("Operation " + operation + " does not exist");
+        try {
+            if (!operation.equals("+") && !operation.equals("*") && !operation.equals("/")) {
+                throw new IllegalOperationException("Operation " + operation + " does not exist");
+            }
+        } catch (IllegalOperationException e) {
+            System.out.println("Operation " + operation + " does not exist");
+            e.printStackTrace();
         }
 
             if (operation == "+") {
@@ -40,4 +45,10 @@ public class CalculatorConundrum {
             }
             return "N/A";
     }
+    class IllegalOperationException extends Exception {
+        public IllegalOperationException(String message) {
+            super(message);
+        }
+    }
+
 }
