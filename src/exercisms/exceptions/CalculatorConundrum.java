@@ -13,7 +13,7 @@ public class CalculatorConundrum {
             throw new IllegalOperationException("Operation '" + operation + "' does not exist");
         }
         if (operation.equals("/") && operand2 == 0) {
-            throw new IllegalOperationException("Division by zero is not allowed", ArithmeticException.class);
+            throw new IllegalOperationException("Division by zero is not allowed", new ArithmeticException("Division by zero"));
         }
         if (operation.equals("+")) {
             int result = operand1 + operand2;
